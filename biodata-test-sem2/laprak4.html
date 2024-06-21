@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page 4</title>
+    <style>
+      .table table {
+        border-collapse: collapse;
+      }
+      .table td {
+        border: 1px solid black;
+      }
+      .table td {
+        text-align: center;
+      }
+
+      .text-name {
+        color: rgb(149, 4, 149);
+      }
+
+      .btn-container {
+        margin-top: 20px;
+        text-align: center;
+      }
+      .btn {
+        background-color: black;
+        color: white;
+        border-radius: 40px;
+        border: none;
+        padding: 10px 20px;
+        margin: 30px;
+        text-decoration: none;
+        display: inline-block;
+      }
+      .btn:hover {
+        background-color: #333;
+      }
+
+      a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+      }
+      input[type="text"],
+      input[type="password"],
+      input[type="email"],
+      select {
+        width: calc(100% - 10px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form">
+      <h2>
+        Dengan Account Yahoo!, dapatkan email gratis dan layanan web
+        <br />terkemuka lainnya.
+      </h2>
+      <hr style="border-color: rgb(192, 192, 242)" />
+      <form>
+        <table>
+          <tr>
+            <td>Nama Saya</td>
+            <td><input type="text" placeholder="Nama Depan" /></td>
+            <td><input type="text" placeholder="Nama Belakang" /></td>
+          </tr>
+          <tr>
+            <td>Jenis Kelamin</td>
+            <td>
+              <select>
+                <option value="">-Pilih Satu-</option>
+                <option value="L">Laki-Laki</option>
+                <option value="P">Perempuan</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Tanggal Lahir</td>
+            <td><input type="text" placeholder="Tanggal" /></td>
+            <td>
+              <select>
+                <option value="">-Pilih Bulan-</option>
+                <option value="j">Januari</option>
+                <option value="f">February</option>
+                <option value="m">Maret</option>
+                <option value="a">April</option>
+                <option value="mei">Mei</option>
+                <option value="juni">Juni</option>
+                <option value="juli">Juli</option>
+                <option value="agustus">Agustus</option>
+                <option value="s">September</option>
+                <option value="o">Oktober</option>
+                <option value="n">November</option>
+                <option value="d">Desember</option>
+              </select>
+            </td>
+            <td><input type="number" placeholder="Tahun" /></td>
+          </tr>
+          <tr>
+            <td>Saya tinggal di</td>
+            <td>
+              <select>
+                <option value="">Indonesia</option>
+                <option value="">Netherlands</option>
+                <option value="">Singapure</option>
+                <option value="">Malaysia</option>
+                <option value="">Portugal</option>
+                <option value="">Argentina</option>
+              </select>
+            </td>
+          </tr>
+        </table>
+      </form>
+      <!-- Sandi START -->
+      <h2 class="text-name">Pilih ID dan kata sandi</h2>
+      <hr />
+      <form>
+        <table>
+          <tr>
+            <td>ID Yahoo! dan Email</td>
+            <td><input type="email" /></td>
+            <td>@</td>
+            <td>
+              <select>
+                <option value="">yahoo.co.id</option>
+                <option value="">gmail.com</option>
+              </select>
+            </td>
+            <td><input type="submit" value="Periksa" /></td>
+          </tr>
+          <tr>
+            <td>Kata Sandi</td>
+            <td><input type="password" /></td>
+          </tr>
+          <tr>
+            <td>Ketik ulang Kata Sandi</td>
+            <td><input type="password" /></td>
+          </tr>
+        </table>
+      </form>
+      <!-- Sandi END -->
+
+      <!-- Forgot Sandi START -->
+      <h2 class="text-name">Jika Anda lupa kata sandi atau ID Anda...</h2>
+      <hr />
+      <form>
+        <table>
+          <tr>
+            <td>Pertanyaan Rahasia 1</td>
+            <td>
+              <select>
+                <option value="">-Pilih Satu-</option>
+                <option value="">Siapa nama ayah anda</option>
+                <option value="">Siapa nama ibu anda</option>
+                <option value="">Apa makanan favorit anda</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Jawaban Anda</td>
+            <td><input type="text" /></td>
+          </tr>
+          <tr>
+            <td>Pertanyaan Rahasia 2</td>
+            <td>
+              <select>
+                <option value="">-Pilih Satu-</option>
+                <option value="">Siapa nama teman anda</option>
+                <option value="">Siapa nama kekasih anda</option>
+                <option value="">Apa game favorit anda</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Jawaban Anda</td>
+            <td><input type="text" /></td>
+          </tr>
+          <tr>
+            <td><input type="submit" value="Kirimkan Data" /></td>
+          </tr>
+        </table>
+      </form>
+    </div>
+    <button class="btn">
+      <a href="mandiri.html" class="linkprak">Back</a>
+    </button>
+    <!-- TABLE END -->
+  </body>
+</html>

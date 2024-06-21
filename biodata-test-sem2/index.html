@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Biodata</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha384-+ioVJl9FlcskPB0aCiE8e5bSbIOATp+bMTg9N2YiJ8Ntvn8FkN2Lv4u1ih+a+OQf"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <style>
+      .sun-moon-toggle {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body class="sun-mode">
+    <div
+      class="profile-data animate__animated animate__fadeInUp animate__delay-0.5s"
+    >
+      <h1 class="profile-name">Dimas Rizki</h1>
+      <div class="typed-container">
+        <span><strong>I'am a</strong> <span id="elemen"></span></span>
+      </div>
+      <h2 class="profile-name2">231106050831</h2>
+      <h2 class="profile-name3">Sistem Informasi</h2>
+    </div>
+    <img
+      src="avatardimas.jpeg"
+      alt="avatar"
+      class="profile-picture animate__animated animate__fadeInUp animate__delay-0.8s"
+    />
+    <div
+      class="social-icons animate__animated animate__fadeInUp animate__delay-0.9s"
+    >
+      <a href="https://www.instagram.com/dimassrzkiii/"
+        ><i class="fab fa-instagram"></i
+      ></a>
+      <a href="https://github.com/ymoricode"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/dimas-rizki-dwi-saputra/"
+        ><i class="fab fa-linkedin"></i
+      ></a>
+    </div>
+    <a
+      href="mandiri.html"
+      class="link animate__animated animate__fadeInUp animate__delay-0.9s"
+      >Tugas Mandiri</a
+    >
+    <a
+      href="praktikum.html"
+      class="link animate__animated animate__fadeInUp animate__delay-0.9s"
+      >Tugas Praktikum</a
+    >
+    <a
+      href="https://drive.google.com/drive/folders/1GeT9pSTSERBotYAtII1EADkGGCADdA_B"
+      class="link animate__animated animate__fadeInUp animate__delay-0.9s"
+      >Laporan Praktikum</a
+    >
+    <div class="about-me animate__animated animate__fadeInUp animate__delay-1s">
+      <h2 class="about-head">About Me</h2>
+      <p>
+        Hello! I am Dimas Rizki, As an Information Systems student at Ibn
+        Khaldun University Bogor, I have a deep interest in web technology and
+        development. During my studies, I have developed skills in programming,
+        database management. I am passionate about developing innovative and
+        effective technology solutions to improve efficiency and user
+        experience. I am experienced in using various programming languages such
+        as HTML, CSS, JavaScript, PHP, and SQL. In addition, I also have
+        knowledge in frameworks such as React.js, Node.js. and Laravel. I am
+        always looking for opportunities to learn new technologies and apply
+        them in the projects I work on.
+      </p>
+    </div>
+    <!-- Use Font Awesome icons for sun and moon -->
+    <i class="fas fa-sun sun-moon-toggle" id="sun"></i>
+    <i class="fas fa-moon sun-moon-toggle" id="moon" style="display: none"></i>
+    <!-- FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/26d4a64054.js"></script>
+    <!-- TYPED JS -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+      // Toggle Sun/Dark Mode
+      const sun = document.getElementById("sun");
+      const moon = document.getElementById("moon");
+
+      function updateToggleButton() {
+        if (document.body.classList.contains("dark-mode")) {
+          sun.style.display = "inline-block";
+          moon.style.display = "none";
+        } else {
+          sun.style.display = "none";
+          moon.style.display = "inline-block";
+        }
+      }
+
+      sun.addEventListener("click", function () {
+        document.body.classList.remove("dark-mode");
+        document.body.classList.add("sun-mode");
+        updateToggleButton();
+      });
+
+      moon.addEventListener("click", function () {
+        document.body.classList.add("dark-mode");
+        document.body.classList.remove("sun-mode");
+        updateToggleButton();
+      });
+
+      updateToggleButton();
+
+      // Typed JS
+      var typed = new Typed("#elemen", {
+        strings: ["Student", "Tech Enthusiast"],
+        typeSpeed: 100,
+        backSpeed: 50,
+        loop: true,
+      });
+    </script>
+  </body>
+</html>

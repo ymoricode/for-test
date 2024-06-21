@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Traveler Bintang Pribadi</title>
+    <style>
+      .btn {
+        background-color: black;
+        color: white;
+        border-radius: 40px;
+        border: none;
+        padding: 10px 20px;
+        margin: 30px;
+        text-decoration: none;
+        display: inline-block;
+      }
+      .btn:hover {
+        background-color: #333;
+      }
+
+      a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+      }
+
+      button {
+        background-color: black;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Travel Bintang Abadi</h1>
+    <label for="nama">Nama Pemesan: </label>
+    <input type="text" id="nama" /><br /><br />
+    <label for="tujuan">Tujuan: </label>
+    <select id="tujuan">
+      <option value="Jakarta">Jakarta</option>
+      <option value="Cirebon">Cirebon</option>
+      <option value="Tasikmalaya">Tasikmalaya</option></select
+    ><br /><br />
+    <label for="jumlah">Jumlah Tiket: </label>
+    <input type="number" id="jumlah" min="1" /><br /><br />
+    <label for="member">Member: </label>
+    <input type="checkbox" id="member" /><br /><br />
+    <button onclick="hitungTotal()">Hitung Total:</button><br /><br />
+    <div id="output"></div>
+    <br /><br />
+    <script>
+      function hitungTotal() {
+        var nama = document.getElementById("nama").value;
+        var tujuan = document.getElementById("tujuan").value;
+        var jumlah = document.getElementById("jumlah").value;
+        var member = document.getElementById("member").checked;
+
+        var hargaTiket;
+        switch (tujuan) {
+          case "Jakarta":
+            hargaTiket = 100000;
+            break;
+          case "Cirebon":
+            hargaTiket = 150000;
+            break;
+          case "Tasikmalaya":
+            hargaTiket = 200000;
+            break;
+        }
+        var subtotal = hargaTiket * jumlah;
+        var diskon = member ? 0.1 * subtotal : 0;
+        var total = subtotal - diskon;
+
+        var output = "Output: <br>";
+        output += "Nama Pemesan: " + nama + "<br>";
+        output += "Tujuan: " + tujuan + "<br>";
+        output += "Jumlah Tiket: " + jumlah + "<br>";
+        output += "Member: " + (member ? "Ya" : "Tidak") + "<br>";
+        output += "Harga Tiket: " + hargaTiket + "<br>";
+        output += "Sub Total: " + subtotal + "<br>";
+        output += "Diskon: " + diskon + "<br>";
+        output += "Total Bayar: " + total + "<br>";
+
+        document.getElementById("output").innerHTML = output;
+      }
+    </script>
+    <br />
+    <br />
+    <a href="praktikum.html"><button>Kembali</button></a>
+  </body>
+</html>

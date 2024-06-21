@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin-top: 40px;
+      }
+      table,
+      tr,
+      td {
+        border: 1px solid black;
+        text-align: center;
+      }
+
+      table {
+        width: 100%;
+      }
+
+      .btn {
+        background-color: black;
+        color: white;
+        border-radius: 40px;
+        border: none;
+        padding: 10px 20px;
+        margin: 30px;
+        text-decoration: none;
+        display: inline-block;
+      }
+      .btn:hover {
+        background-color: #333;
+      }
+
+      a {
+        text-decoration: none;
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body>
+    <style>
+      td {
+        text-align: center;
+      }
+    </style>
+    <table border="1" style="width: 50%; height: 200%">
+      <tr>
+        <td>1</td>
+        <td colspan="2">2</td>
+      </tr>
+      <tr>
+        <td rowspan="5">3</td>
+      </tr>
+      <tr>
+        <td colspan="2">4</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>6</td>
+      </tr>
+      <tr></tr>
+      <tr></tr>
+      <tr></tr>
+      <tr>
+        <td style="border-color: white"></td>
+        <td style="border-color: white"></td>
+        <td rowspan="5">10</td>
+      </tr>
+      <tr></tr>
+      <tr>
+        <td rowspan="2">7</td>
+        <td>8</td>
+      </tr>
+      <tr>
+        <td>9</td>
+      </tr>
+      <tr></tr>
+      <tr></tr>
+    </table>
+    <button class="btn">
+      <i class="fa-solid fa-house"></i>
+      <a href="mandiri.html" class="linkprak">Back</a>
+    </button>
+  </body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menghitung Indeks Prestasi</title>
+    <style>
+      .btn {
+        background-color: black;
+        color: white;
+        border-radius: 40px;
+        border: none;
+        padding: 10px 20px;
+        margin: 30px;
+        text-decoration: none;
+        display: inline-block;
+      }
+      .btn:hover {
+        background-color: #333;
+      }
+
+      a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+      }
+
+      table {
+        margin-top: 30px;
+      }
+      th,
+      td {
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Menghitung Indeks Prestasi</h1>
+    <table border="1">
+      <tr>
+        <th>Quiz (10%)</th>
+        <th>Tugas (20%)</th>
+        <th>UTS (30%)</th>
+        <th>UAS (40%)</th>
+      </tr>
+      <tr>
+        <td>
+          <input type="number" id="quiz" value="78" placeholder="input" />
+        </td>
+        <td>
+          <input type="number" id="tugas" value="80" placeholder="input" />
+        </td>
+        <td><input type="number" id="uts" value="85" placeholder="input" /></td>
+        <td><input type="number" id="uas" value="80" placeholder="input" /></td>
+      </tr>
+      <tr>
+        <td colspan="4" style="text-align: center">
+          <button onclick="hitungIndeksPrestasi()">Hitung</button>
+          <button onclick="resetForm()">Ulang</button>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4" style="text-align: center">
+          <p>Indeks Prestasi: <span id="indeksPrestasi"></span></p>
+          <p id="keterangan"></p>
+        </td>
+      </tr>
+    </table>
+    <script>
+      function hitungIndeksPrestasi() {
+        const quiz = parseInt(document.getElementById("quiz").value);
+        const tugas = parseInt(document.getElementById("tugas").value);
+        const uts = parseInt(document.getElementById("uts").value);
+        const uas = parseInt(document.getElementById("uas").value);
+
+        const indeksPrestasi = 0.1 * quiz + 0.2 * tugas + 0.3 * uts + 0.4 * uas;
+        document.getElementById("indeksPrestasi").textContent =
+          indeksPrestasi.toFixed(2);
+        let keterangan = "";
+        if (indeksPrestasi >= 80) {
+          keterangan = "A, Lulus dengan sangat baik";
+        } else if (indeksPrestasi >= 70) {
+          keterangan = "B, Lulus dengan baik";
+        } else if (indeksPrestasi >= 60) {
+          keterangan = "C, Lulus";
+        } else {
+          keterangan = "D, Tidak lulus";
+        }
+        document.getElementById("keterangan").textContent = keterangan;
+      }
+
+      function resetForm() {
+        document.getElementById("quiz").value = 78;
+        document.getElementById("tugas").value = 80;
+        document.getElementById("uts").value = 85;
+        document.getElementById("uas").value = 80;
+        document.getElementById("indeksPrestasi").textContent = "";
+        document.getElementById("keterangan").textContent = "";
+      }
+    </script>
+    <br />
+    <br />
+    <a href="praktikum.html"><button>Kembali</button></a>
+  </body>
+</html>

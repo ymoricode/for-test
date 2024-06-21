@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menentukan Bilangan</title>
+    <style>
+      .btn {
+        background-color: black;
+        color: white;
+        border-radius: 40px;
+        border: none;
+        padding: 10px 20px;
+        margin: 30px;
+        text-decoration: none;
+        display: inline-block;
+      }
+      .btn:hover {
+        background-color: #333;
+      }
+
+      a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+      }
+
+      button {
+        background-color: black;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <form name="fform">
+      <h1>Bilangan Negatif, Nol, atau Positif</h1>
+      <h2>
+        Masukkan Bilangan :<input
+          type="text"
+          size="11"
+          name="bilangan1"
+          placeholder="masukkan bilangan"
+        />
+      </h2>
+      <p>
+        <input type="button" value="Tanya" onclick="angka()" />
+        <input type="reset" value="Ulang" />
+      </p>
+    </form>
+    <script lang="javascript">
+      function angka () {
+          var bil1 = parseFloat(document.fform.bilangan1.value);
+          var hasil;
+          if(bil1 > 0) {
+              hasil = "Positif";
+          } else if (bil1 < 0) {
+            hasil ="Negatif"
+          } else {
+            hasil = "Nol"
+          }
+          alert( bil1 + " Adalah Bilangan " + hasil);
+      }
+    </script>
+    <br />
+    <br />
+    <a href="praktikum.html"><button>Kembali</button></a>
+  </body>
+</html>

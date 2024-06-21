@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Percabangan Switch</title>
+    <style>
+      .input-group {
+        display: flex;
+
+        margin-bottom: 10px;
+      }
+      .btn {
+        background-color: black;
+        color: white;
+        border-radius: 40px;
+        border: none;
+        padding: 10px 20px;
+        margin: 30px;
+        text-decoration: none;
+        display: inline-block;
+      }
+      .btn:hover {
+        background-color: #333;
+      }
+
+      a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+      }
+
+      button {
+        background-color: black;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        display: flex;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Penggunaan Percabangan Switch</h1>
+    <hr />
+    <div>
+      Masukkan Nomor Bulan [1-12]<input
+        type="number"
+        id="input-bulan"
+        placeholder="Masukkan Nomor Bulan (1-12)"
+      />
+    </div>
+    <div class="input-group">
+      <button onclick="cekBulan()">Hitung</button>
+      <button onclick="clear()">Ulang</button>
+    </div>
+    <div id="output"></div>
+    <script>
+      function cekBulan() {
+        var bulan = parseInt(document.getElementById("input-bulan").value);
+        var output = document.getElementById("output");
+        output.innerHTML = "";
+
+        switch (bulan) {
+          case 1:
+            showAlert("Bulan ke 1 adalah = Januari");
+            break;
+          case 2:
+            showAlert("Bulan ke 2 adalah = Februari");
+            break;
+          case 3:
+            showAlert("Bulan ke 3 adalah = Maret");
+            break;
+          case 4:
+            showAlert("Bulan ke 4 adalah = April");
+            break;
+          case 5:
+            showAlert("Bulan ke 5 adalah = Mei");
+            break;
+          case 6:
+            showAlert("Bulan ke 6 adalah = Juni");
+            break;
+          case 7:
+            showAlert("Bulan ke 7 adalah = Juli");
+            break;
+          case 8:
+            showAlert("Bulan ke 8 adalah = Agustus");
+            break;
+          case 9:
+            showAlert("Bulan ke 9 adalah = September");
+            break;
+          case 10:
+            showAlert("Bulan ke 10 adalah = Oktober");
+            break;
+          case 11:
+            showAlert("Bulan ke 11 adalah = November");
+            break;
+          case 12:
+            showAlert("Bulan ke 12 adalah = Desember");
+            break;
+          default:
+            showAlert("Nomor Bulan tidak valid");
+        }
+      }
+
+      function showAlert(message) {
+        var alertBox = document.createElement("div");
+        alertBox.style.position = "fixed";
+        alertBox.style.top = "50%";
+        alertBox.style.left = "50%";
+        alertBox.style.transform = "translate(-50%, -50%)";
+        alertBox.style.backgroundColor = "white";
+        alertBox.style.border = "1px solid #ccc";
+        alertBox.style.padding = "20px";
+
+        var alertMessage = document.createElement("p");
+        alertMessage.textContent = message;
+        alertBox.appendChild(alertMessage);
+
+        var okButton = document.createElement("button");
+        okButton.textContent = "OK";
+        okButton.style.marginTop = "10px";
+        okButton.onclick = function () {
+          document.body.removeChild(alertBox);
+        };
+        alertBox.appendChild(okButton);
+        document.body.appendChild(alertBox);
+      }
+
+      function clear() {
+        document.getElementById("output").innerHTML = "";
+      }
+    </script>
+    <br />
+    <br />
+    <a href="praktikum.html"><button>Kembali</button></a>
+  </body>
+</html>

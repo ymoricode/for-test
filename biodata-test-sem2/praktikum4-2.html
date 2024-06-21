@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form CSS</title>
+    <style>
+      form {
+        border: 2px solid #ccc;
+        padding: 20px;
+        width: 1000px;
+        background-color: #f9f9f9;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+        color: black;
+        font-weight: bold;
+      }
+
+      input[type="text"],
+      select {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+        background-color: white;
+      }
+
+      button {
+        width: 100%;
+        padding: 10px;
+        background-color: limegreen;
+        border: none;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      option {
+        font-weight: bold;
+      }
+
+      .btn {
+        background-color: black;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        display: flex;
+        width: 10%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Membuat Form dengan HTML Dan CSS</h1>
+    <form action="#">
+      <label for="name">Nama Depan</label>
+      <input type="text" id="name" placeholder="Nama Anda.." />
+
+      <label for="namelast">Nama Belakang</label>
+      <input type="text" id="namelast" placeholder="Nama Belakang Anda.." />
+
+      <label for="prov">Provinsi</label>
+      <select name="prov" id="prov">
+        <option value="Jabar">Jawa Barat</option>
+        <option value="Jabar">Sumatera Selatan</option>
+        <option value="Jabar">Riau</option>
+        <option value="Jabar">Jawa Tengah</option>
+        <option value="Jabar">Sulawesi Tengah</option>
+      </select>
+      <button type="submit">Kirim</button>
+    </form>
+    <br />
+    <br />
+    <a href="praktikum.html"><button class="btn">Kembali</button></a>
+  </body>
+</html>

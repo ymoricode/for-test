@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latihan Dengan Objek Radio</title>
+    <style>
+      button {
+        background-color: black;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <script language="javascript">
+      function radio_box(form) {
+        var ket = "";
+        if (form.wanita.checked == true) {
+          ket = "Wanita";
+        } else {
+          ket = "Pria";
+        }
+        alert("Anda adalah seorang " + ket);
+      }
+    </script>
+    <form>
+      <h1>Memasukan Data Dengan Objek Radio</h1>
+      <hr />
+      <p>
+        <input
+          type="radio"
+          value="wanita"
+          name="wanita"
+          placeholder="wanita"
+        />Wanita
+      </p>
+      <hr />
+      <p>
+        <input
+          type="button"
+          value="Konfirmasi"
+          onclick="radio_box(this.form)"
+        />
+        <input type="reset" value="RESET" />
+      </p>
+    </form>
+    <br />
+    <br />
+    <a href="praktikum.html"><button>Kembali</button></a>
+  </body>
+</html>
+
+<!--jika kita -->
